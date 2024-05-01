@@ -41,6 +41,14 @@ func PopStack(s **Stack) string {
 	}
 }
 
+func PeekStack(s **Stack) string {
+	if IsEmpty(s) {
+		return "-1"
+	} else {
+		return (*s).Array[(*s).Top]
+	}
+}
+
 func DoubleSize(s **Stack) {
 	new_cap := (*s).Capacity * 2
 	newArray := make([]string, new_cap)
